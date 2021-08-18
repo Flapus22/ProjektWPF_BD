@@ -16,6 +16,7 @@ namespace ProjektWPF_BD.Helper
         {
             Action = action;
         }
+
         public bool CanExecute(object parameter)
         {
             if (Action != null)return true;

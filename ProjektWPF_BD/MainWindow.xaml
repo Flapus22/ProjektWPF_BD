@@ -43,7 +43,9 @@
             </mah:DropDownButton>
         </ToolBarPanel>
         <Grid  Grid.Row="1">
-            <UserControl x:Name="test" Content="{Binding}"/>
+            <!--<View:DataGrid1/>-->
+            <ContentControl x:Name="contentControl"  Content="{Binding UserControl}"/>
+
         </Grid>
 
     </Grid>

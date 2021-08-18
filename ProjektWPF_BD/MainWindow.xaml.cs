@@ -29,10 +29,10 @@ namespace ProjektWPF_BD
         public MainWindow()
         {
             InitializeComponent();
-            DropDownBtnNowy.DataContext = DropDownBtnListViewModel.DropDownList_Nowy;
-            DropDownBtnWyswietl.DataContext = DropDownBtnListViewModel.dropDownList_Wyswietl;
-            test.DataContext = ContentControl;
-            ContentControl = new DataGrid1();
+            DropDownBtnNowy.DataContext = DropDownBtnListViewModel.DropDownList_New;
+            DropDownBtnWyswietl.DataContext = DropDownBtnListViewModel.dropDownList_Show;
+            //test.DataContext = new DataGrid1();
+            contentControl.DataContext = DataGridViewModel.instance;
         }
 
     }

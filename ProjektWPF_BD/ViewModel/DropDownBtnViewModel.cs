@@ -19,7 +19,5 @@ namespace ProjektWPF_BD.ViewModel
             Title = title;
             Command = new RelayCommand(command);
         }
-
-        
     }
 }

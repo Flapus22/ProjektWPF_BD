@@ -17,13 +17,13 @@ namespace ProjektWPF_BD.Model
         {
         }
 
-        public virtual DbSet<Dostawcy> Dostawcies { get; set; }
-        public virtual DbSet<Kategorie> Kategories { get; set; }
-        public virtual DbSet<Klienci> Kliencis { get; set; }
+        public virtual DbSet<Dostawcy> Dostawcy { get; set; }
+        public virtual DbSet<Kategorie> Kategorie { get; set; }
+        public virtual DbSet<Klienci> Klienci { get; set; }
         public virtual DbSet<PozycjeZamówienium> PozycjeZamówienia { get; set; }
-        public virtual DbSet<Pracownicy> Pracownicies { get; set; }
-        public virtual DbSet<Produkty> Produkties { get; set; }
-        public virtual DbSet<Spedytorzy> Spedytorzies { get; set; }
+        public virtual DbSet<Pracownicy> Pracownicy { get; set; }
+        public virtual DbSet<Produkty> Produkty { get; set; }
+        public virtual DbSet<Spedytorzy> Spedytorzy { get; set; }
 
         public virtual DbSet<Zamówienium> Zamówienia { get; set; }
 

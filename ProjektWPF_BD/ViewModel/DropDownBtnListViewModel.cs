@@ -8,19 +8,19 @@ namespace ProjektWPF_BD.ViewModel
 {
     class DropDownBtnListViewModel
     {
-        public static List<DropDownBtnViewModel> DropDownList_Nowy { get; set; } = new List<DropDownBtnViewModel>
+        public static List<DropDownBtnViewModel> DropDownList_New { get; set; } = new List<DropDownBtnViewModel>
         {
             new DropDownBtnViewModel("Pracownik"),
             new DropDownBtnViewModel("Produkt"),
             new DropDownBtnViewModel("Klient"),
             new DropDownBtnViewModel("Transakcja")
         };
-        public static List<DropDownBtnViewModel> dropDownList_Wyswietl { get; set; } = new List<DropDownBtnViewModel>
+        public static List<DropDownBtnViewModel> dropDownList_Show { get; set; } = new List<DropDownBtnViewModel>
         {
-            new DropDownBtnViewModel("Pracownik"),
-            new DropDownBtnViewModel("Produkt"),
-            new DropDownBtnViewModel("Klient"/*,DataGridViewModel.LoadCustomers*/),
-            new DropDownBtnViewModel("Transakcja")
+            new DropDownBtnViewModel("Pracownik", DataGridViewModel.instance.ShowEmployee),
+            new DropDownBtnViewModel("Produkt", DataGridViewModel.instance.ShowProduct),
+            new DropDownBtnViewModel("Klient", DataGridViewModel.instance.ShowCustomers),
+            new DropDownBtnViewModel("Transakcja", DataGridViewModel.instance.ShowTransactions)
         };
 
 

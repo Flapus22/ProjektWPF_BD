@@ -21,12 +21,14 @@ namespace ProjektWPF_BD.View
     /// <summary>
     /// Logika interakcji dla klasy DataGrid.xaml
     /// </summary>
-    public partial class DataGrid1 : UserControl
+    public partial class DataGridTransactions : UserControl
     {
-        public DataGrid1()
+        public DataGridTransactions()
         {
             InitializeComponent();
-            //DataContext = DataGridViewModel.TargetList;
+            DataGridViewModel.instance.LoadCustomers();
+
+            Data.DataContext = DataGridViewModel.instance;
         }
 
     }

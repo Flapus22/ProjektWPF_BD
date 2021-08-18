@@ -7,7 +7,7 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="View\UserControls\DataGrid1.xaml.cs">
+    <Compile Update="View\UserControls\DataGridCustomer.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="View\Windows\UpdataView.xaml.cs">
@@ -18,7 +18,16 @@
     <Page Update="MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="View\UserControls\DataGrid1.xaml">
+    <Page Update="View\UserControls\DataGridEmployee.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\UserControls\DataGridTransactions.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\UserControls\DataGridProduct.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\UserControls\DataGridCustomer.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\Windows\UpdataView.xaml">
