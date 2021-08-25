@@ -56,16 +56,17 @@ namespace ProjektWPF_BD.ViewModel
 
             UserControl = DataGridViewEmployee;
         }
+
         public void ShowProduct()
         {
             UserControl = DataGridViewProduct;
 
         }
+
         public void ShowTransactions()
         {
             UserControl = DataGridViewTransactions;
             ProductViewModel productViewModel = new ProductViewModel();
-
         }
 
 

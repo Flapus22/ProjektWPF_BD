@@ -25,14 +25,15 @@
         </Grid.RowDefinitions>
 
         <ToolBarPanel Orientation="Horizontal" >
-            <mah:DropDownButton x:Name="DropDownBtnNowy" Content="Nowy" ItemsSource="{Binding}">
+            <!--<mah:DropDownButton x:Name="DropDownBtnNowy" Content="Nowy" ItemsSource="{Binding}">
                 <mah:DropDownButton.ItemContainerStyle>
                     <Style TargetType="MenuItem">
                         <Setter Property="Header" Value="{Binding Path=Title}"/>
                         <Setter Property="Command" Value="{Binding Path=Command}"/>
                     </Style>
                 </mah:DropDownButton.ItemContainerStyle>
-            </mah:DropDownButton>
+            </mah:DropDownButton>-->
+            <Button Content="Nowy" Click="Button_Click"/>
             <mah:DropDownButton x:Name="DropDownBtnWyswietl" Content="Wyświetl" ItemsSource="{Binding}">
                 <mah:DropDownButton.ItemContainerStyle>
                     <Style TargetType="MenuItem">
@@ -41,11 +42,11 @@
                     </Style>
                 </mah:DropDownButton.ItemContainerStyle>
             </mah:DropDownButton>
+            <Button Click="Button_Click_1">Klik</Button>
         </ToolBarPanel>
         <Grid  Grid.Row="1">
             <!--<View:DataGrid1/>-->
             <ContentControl x:Name="contentControl"  Content="{Binding UserControl}"/>
-
         </Grid>
 
     </Grid>

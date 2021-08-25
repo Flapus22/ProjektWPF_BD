@@ -15,8 +15,8 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using ProjektWPF_BD.ViewModel;
 using ProjektWPF_BD.View;
-
-
+using ProjektWPF_BD.View.Windows;
+using ProjektWPF_BD.Model;
 
 namespace ProjektWPF_BD
 {
@@ -29,11 +29,39 @@ namespace ProjektWPF_BD
         public MainWindow()
         {
             InitializeComponent();
-            DropDownBtnNowy.DataContext = DropDownBtnListViewModel.DropDownList_New;
-            DropDownBtnWyswietl.DataContext = DropDownBtnListViewModel.dropDownList_Show;
+            //DropDownBtnNowy.DataContext = DropDownBtnListViewModel.DropDownList_New;
+            DropDownBtnWyswietl.DataContext = DropDownBtnListViewModel.DropDownList_Show;
             //test.DataContext = new DataGrid1();
             contentControl.DataContext = DataGridViewModel.instance;
         }
 
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            var window = new NewDataWindowView();
+            window.Show();
+        }
+
+        private async void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            await using BD1_2020Context context = new BD1_2020Context();
+
+            var newCustomer = new Klienci()
+            {
+                Idklienta = "",
+                NazwaFirmy = "Bączki",
+                Przedstawiciel = "aaa",
+                StanowiskoPrzedstawiciela = "aaa",
+                Adres = "aaa",
+                Miasto = "aaa",
+                Region = "aaa",
+                KodPocztowy = "aaa",
+                Kraj = "aaa",
+                Telefon = "aaa",
+                Faks = "aaa"
+            };
+
+            context.Klienci.Add(newCustomer);
+            await context.SaveChangesAsync();
+        }
     }
 }

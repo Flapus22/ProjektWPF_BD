@@ -10,6 +10,21 @@
     <Compile Update="View\UserControls\DataGridCustomer.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="View\UserControls\NewCustomerUserControlView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\UserControls\NewEmployeeUserControlView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\UserControls\NewProductUserControlView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\UserControls\NewTransactionUserControlView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\Windows\NewDataWindowView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="View\Windows\UpdataView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -28,6 +43,21 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\UserControls\DataGridCustomer.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\UserControls\NewCustomerUserControlView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\UserControls\NewEmployeeUserControlView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\UserControls\NewProductUserControlView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\UserControls\NewTransactionUserControlView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\Windows\NewDataWindowView.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\Windows\UpdataView.xaml">

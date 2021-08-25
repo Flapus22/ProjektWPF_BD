@@ -9,8 +9,16 @@ namespace ProjektWPF_BD.Helper
 {
     class RelayCommand : ICommand
     {
-        private Action Action;
         public event EventHandler CanExecuteChanged;
+
+        //Func<Task> Action;
+
+        //public RelayCommand(Func<Task> action)
+        //{
+        //    Action = action;
+        //}
+
+        private Action Action;
 
         public RelayCommand(Action action)
         {

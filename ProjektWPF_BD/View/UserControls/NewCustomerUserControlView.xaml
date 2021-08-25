@@ -1,0 +1,52 @@
+﻿<UserControl x:Class="ProjektWPF_BD.View.UserControls.NewCustomerUserControlView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+             xmlns:local="clr-namespace:ProjektWPF_BD.View.Windows"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <StackPanel >
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Text="Nazwa Firmy:"  VerticalAlignment="Center" Width="200" TextAlignment="Center"/>
+            <TextBox Width="200" mah:TextBoxHelper.Watermark="Tekst" Text="{Binding Path=NazwaFirmy}"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Text="Przedstawiciel:"  VerticalAlignment="Center" Width="200" TextAlignment="Center"/>
+            <TextBox Width="200" mah:TextBoxHelper.Watermark="Tekst" Text="{Binding Path=Przedstawiciel}"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Text="Stanowisko Przedstawiciela:"  VerticalAlignment="Center" Width="200" TextAlignment="Center"/>
+            <TextBox Width="200" mah:TextBoxHelper.Watermark="Tekst" Text="{Binding Path=StanowiskoPrzedstawiciela}"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Text="Adres:"  VerticalAlignment="Center" Width="200" TextAlignment="Center"/>
+            <TextBox Width="200" mah:TextBoxHelper.Watermark="Tekst" Text="{Binding Path=Adres}"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Text="Miasto:"  VerticalAlignment="Center" Width="200" TextAlignment="Center"/>
+            <TextBox Width="200" mah:TextBoxHelper.Watermark="Tekst" Text="{Binding Path=Miasto}"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Text="Region:"  VerticalAlignment="Center" Width="200" TextAlignment="Center"/>
+            <TextBox Width="200" mah:TextBoxHelper.Watermark="Tekst" Text="{Binding Path=Region}"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Text="KodPocztowy:"  VerticalAlignment="Center" Width="200" TextAlignment="Center"/>
+            <TextBox Width="200" mah:TextBoxHelper.Watermark="Tekst" Text="{Binding Path=KodPocztowy}" />
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Text="Kraj:"  VerticalAlignment="Center" Width="200" TextAlignment="Center"/>
+            <TextBox Width="200" mah:TextBoxHelper.Watermark="Tekst" Text="{Binding Path=Kraj}" />
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Text="Telefon:"  VerticalAlignment="Center" Width="200" TextAlignment="Center"/>
+            <TextBox Width="200" mah:TextBoxHelper.Watermark="Tekst" Text="{Binding Path=Telefon}" />
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Text="Faks:"  VerticalAlignment="Center" Width="200" TextAlignment="Center"/>
+            <TextBox Width="200" mah:TextBoxHelper.Watermark="Tekst" Text="{Binding Path=Faks}" />
+        </StackPanel>
+    </StackPanel>
+</UserControl>
