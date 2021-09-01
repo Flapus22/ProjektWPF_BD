@@ -12,9 +12,9 @@ TRACE;DEBUG;NET;NET5_0;NETCOREAPP
 D:\Projekty\Visual\Semestr 4\Programowanie IV\ProjektWPF_BD\ProjektWPF_BD\App.xaml
 11-306239990
 
-31-1897621831
+341953306869
 218-631749687
 MainWindow.xaml;View\UserControls\DataGridCustomer.xaml;View\UserControls\DataGridEmployee.xaml;View\UserControls\DataGridProduct.xaml;View\UserControls\DataGridTransactions.xaml;View\UserControls\NewCustomerUserControlView.xaml;View\UserControls\NewEmployeeUserControlView.xaml;View\UserControls\NewProductUserControlView.xaml;View\UserControls\NewTransactionUserControlView.xaml;View\Windows\NewDataWindowView.xaml;View\Windows\UpdataView.xaml;
 
-True
+False
 

@@ -1,6 +1,4 @@
-﻿using ProjektWPF_BD.Model;
-using ProjektWPF_BD.ViewModel;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProjektWPF_BD.ViewModel
 {
-    class NewCustomerViewModel
+    class CustomerViewModel
     {
         public string Idklienta { get; set; }
         public string NazwaFirmy { get; set; }
@@ -21,6 +19,5 @@ namespace ProjektWPF_BD.ViewModel
         public string Kraj { get; set; }
         public string Telefon { get; set; }
         public string Faks { get; set; }
-
     }
 }

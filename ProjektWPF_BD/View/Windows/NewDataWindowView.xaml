@@ -16,8 +16,8 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <DockPanel LastChildFill="False" >
-            <Button Content="Stwórz"/>
-            <mah:DropDownButton x:Name="DropDownBtnTemplate" Content="Szablon" ItemsSource="{Binding}">
+            <Button x:Name="newData" Content="Stwórz" Command="{Binding CreateNewData.Command}"/>
+            <mah:DropDownButton x:Name="DropDownBtnTemplate" Content="Szablon" ItemsSource="{Binding DropDownList_Templates}">
                 <mah:DropDownButton.ItemContainerStyle>
                     <Style TargetType="MenuItem">
                         <Setter Property="Header" Value="{Binding Path=Title}"/>

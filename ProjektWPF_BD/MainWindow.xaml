@@ -20,7 +20,7 @@
     
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="40"/>
+            <RowDefinition Height="50"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
@@ -42,10 +42,9 @@
                     </Style>
                 </mah:DropDownButton.ItemContainerStyle>
             </mah:DropDownButton>
-            <Button Click="Button_Click_1">Klik</Button>
+            <!--<Button Click="Button_Click_1">Klik</Button>-->
         </ToolBarPanel>
         <Grid  Grid.Row="1">
-            <!--<View:DataGrid1/>-->
             <ContentControl x:Name="contentControl"  Content="{Binding UserControl}"/>
         </Grid>
 

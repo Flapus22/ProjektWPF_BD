@@ -7,11 +7,14 @@ using System.Threading.Tasks;
 
 namespace ProjektWPF_BD.ViewModel
 {
-    class ProductViewModel: INotifyPropertyChanged
+    public class ProductViewModel: INotifyPropertyChanged
     {
         public int Idproduktu { get; set; }
         public string NazwaProduktu { get; set; }
-
+        public string NazwaFirmy { get; set; }
+        public bool NazwaFirmyPoID { get; set; }
+        public string NazwaKategorii { get; set; }
+        public bool KategoriaPoID { get; set; }
         public string IlośćJednostkowa { get; set; }
         public decimal? CenaJednostkowa { get; set; }
         public short? StanMagazynu { get; set; }

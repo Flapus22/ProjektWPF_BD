@@ -26,7 +26,7 @@ namespace ProjektWPF_BD.ViewModel
         public static DataGridProduct DataGridViewProduct { get; set; } = new DataGridProduct();
         public static DataGridTransactions DataGridViewTransactions { get; set; } = new DataGridTransactions();
 
-        public UserControl UserControl { get; set; } = DataGridViewCustomer;
+        public UserControl UserControl { get; set; } 
 
 
         public event PropertyChangedEventHandler PropertyChanged;
@@ -39,36 +39,46 @@ namespace ProjektWPF_BD.ViewModel
 
         }
 
-        public async void ShowCustomers()
+        public async Task ShowCustomers()
         {
-            await using var context = new BD1_2020Context();
-
-            Customer = context.Klienci.ToList();
+            //await using var context = new BD1_2020Context();
 
             instance.UserControl = DataGridViewCustomer;
+            await using (var context = new BD1_2020Context())
+            {
+                Customer = context.Klienci.ToList();
+            }
 
         }
-        public async void ShowEmployee()
+        public async Task ShowEmployee()
         {
-            await using var context = new BD1_2020Context();
+            //await using var context = new BD1_2020Context();
+            //Employee = context.Pracownicy.ToList();
 
-            Employee = context.Pracownicy.ToList();
-
-            UserControl = DataGridViewEmployee;
+            instance.UserControl = DataGridViewEmployee;
+            await using (var context = new BD1_2020Context())
+            {
+                Employee = context.Pracownicy.ToList();
+            }
         }
 
-        public void ShowProduct()
+        public async Task ShowProduct()
         {
-            UserControl = DataGridViewProduct;
-
+            instance.UserControl = DataGridViewProduct;
+            await using (var context = new BD1_2020Context())
+            {
+                Product = context.Produkty.ToList();
+            }
         }
 
-        public void ShowTransactions()
+        public async Task ShowTransactions()
         {
-            UserControl = DataGridViewTransactions;
-            ProductViewModel productViewModel = new ProductViewModel();
+            instance.UserControl = DataGridViewTransactions;
+            //ProductViewModel productViewModel = new ProductViewModel();
+            await using (var context = new BD1_2020Context())
+            {
+                Transaction = context.Zamówienia.OrderByDescending(x=>x.DataZamówienia).Where(x=>x.DataZamówienia!=null).Take(100).ToList();
+            }
         }
-
-
     }
 }

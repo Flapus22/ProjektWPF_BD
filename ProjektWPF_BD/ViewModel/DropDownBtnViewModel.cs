@@ -14,10 +14,15 @@ namespace ProjektWPF_BD.ViewModel
 
         public ICommand Command { get; set; }
 
-        public DropDownBtnViewModel(string title, Action command = null)
+        public DropDownBtnViewModel(Func<Task> command = null, string title = null)
         {
             Title = title;
             Command = new RelayCommand(command);
         }
+        //public DropDownBtnViewModel(Action command = null, string title = null)
+        //{
+        //    Title = title;
+        //    Command = new RelayCommand(command);
+        //}
     }
 }

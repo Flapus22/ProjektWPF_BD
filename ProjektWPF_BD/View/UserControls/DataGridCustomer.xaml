@@ -18,7 +18,12 @@
         </DockPanel>
 
         <ScrollViewer Grid.Row="1" HorizontalScrollBarVisibility ="Auto" VerticalScrollBarVisibility="Auto">
-            <DataGrid x:Name="Data" ItemsSource="{Binding Customer}"  IsReadOnly="True"/>
+            <DataGrid x:Name="Data" ItemsSource="{Binding Customer}" IsReadOnly="True" 
+                       GridLinesVisibility="Vertical" VerticalGridLinesBrush="#FF303030" AlternationCount="10">
+                <DataGrid.AlternatingRowBackground>
+                    <SolidColorBrush Color="#FFF99939" Opacity="0.7"/>
+                </DataGrid.AlternatingRowBackground>
+            </DataGrid>
         </ScrollViewer>
     </Grid>
     

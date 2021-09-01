@@ -24,8 +24,7 @@ namespace ProjektWPF_BD.View.Windows
         public NewDataWindowView()
         {
             InitializeComponent();
-            DropDownBtnTemplate.DataContext = DropDownBtnListViewModel.DropDownList_Templates;
-            contentControl.DataContext = NewDataWindowViewModel.instance;
+            DataContext = new NewDataWindowViewModel(this);
         }
     }
 }

@@ -11,19 +11,19 @@ namespace ProjektWPF_BD.Helper
     {
         public event EventHandler CanExecuteChanged;
 
-        //Func<Task> Action;
+        Func<Task> Action;
 
-        //public RelayCommand(Func<Task> action)
-        //{
-        //    Action = action;
-        //}
-
-        private Action Action;
-
-        public RelayCommand(Action action)
+        public RelayCommand(Func<Task> action)
         {
             Action = action;
         }
+
+        //private Action Action;
+
+        //public RelayCommand(Action action)
+        //{
+        //    Action = action;
+        //}
 
         public bool CanExecute(object parameter)
         {
@@ -32,7 +32,8 @@ namespace ProjektWPF_BD.Helper
         }
         public void Execute(object parameter)
         {
-            Action.Invoke();
+            //Action.Invoke();
+            Task.Run(Action);
         }
     }
 }

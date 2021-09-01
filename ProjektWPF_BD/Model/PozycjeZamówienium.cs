@@ -7,7 +7,7 @@ namespace ProjektWPF_BD.Model
 {
     public partial class PozycjeZamówienium
     {
-        public int? Idzamówienia { get; set; }
+        public int Idzamówienia { get; set; }
         public int Idproduktu { get; set; }
         public decimal CenaJednostkowa { get; set; }
         public short Ilość { get; set; }

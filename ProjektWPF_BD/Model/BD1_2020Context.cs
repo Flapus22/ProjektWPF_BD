@@ -24,7 +24,6 @@ namespace ProjektWPF_BD.Model
         public virtual DbSet<Pracownicy> Pracownicy { get; set; }
         public virtual DbSet<Produkty> Produkty { get; set; }
         public virtual DbSet<Spedytorzy> Spedytorzy { get; set; }
-
         public virtual DbSet<Zamówienium> Zamówienia { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -92,17 +91,17 @@ namespace ProjektWPF_BD.Model
 
             modelBuilder.Entity<Klienci>(entity =>
             {
-                entity.HasNoKey();
+                entity.HasKey(e => e.Idklienta);
 
                 entity.ToTable("Klienci");
-
-                entity.Property(e => e.Adres).HasMaxLength(60);
-
-                entity.Property(e => e.Faks).HasMaxLength(24);
 
                 entity.Property(e => e.Idklienta)
                     .HasMaxLength(5)
                     .HasColumnName("IDklienta");
+
+                entity.Property(e => e.Adres).HasMaxLength(60);
+
+                entity.Property(e => e.Faks).HasMaxLength(24);
 
                 entity.Property(e => e.KodPocztowy).HasMaxLength(10);
 
@@ -125,20 +124,24 @@ namespace ProjektWPF_BD.Model
 
             modelBuilder.Entity<PozycjeZamówienium>(entity =>
             {
-                entity.HasNoKey();
+                entity.HasKey(e => new { e.Idzamówienia, e.Idproduktu });
 
-                entity.Property(e => e.CenaJednostkowa).HasColumnType("money");
+                entity.Property(e => e.Idzamówienia).HasColumnName("IDzamówienia");
 
                 entity.Property(e => e.Idproduktu).HasColumnName("IDproduktu");
 
-                entity.Property(e => e.Idzamówienia).HasColumnName("IDzamówienia");
+                entity.Property(e => e.CenaJednostkowa).HasColumnType("money");
             });
 
             modelBuilder.Entity<Pracownicy>(entity =>
             {
-                entity.HasNoKey();
+                entity.HasKey(e => e.Idpracownika);
 
                 entity.ToTable("Pracownicy");
+
+                entity.Property(e => e.Idpracownika)
+                    .ValueGeneratedNever()
+                    .HasColumnName("IDpracownika");
 
                 entity.Property(e => e.Adres).HasMaxLength(60);
 
@@ -147,8 +150,6 @@ namespace ProjektWPF_BD.Model
                 entity.Property(e => e.DataZatrudnienia).HasColumnType("datetime");
 
                 entity.Property(e => e.Fotografia).HasColumnType("image");
-
-                entity.Property(e => e.Idpracownika).HasColumnName("IDpracownika");
 
                 entity.Property(e => e.Imię)
                     .IsRequired()
@@ -177,17 +178,19 @@ namespace ProjektWPF_BD.Model
 
             modelBuilder.Entity<Produkty>(entity =>
             {
-                entity.HasNoKey();
+                entity.HasKey(e => e.Idproduktu);
 
                 entity.ToTable("Produkty");
+
+                entity.Property(e => e.Idproduktu)
+                    .ValueGeneratedNever()
+                    .HasColumnName("IDproduktu");
 
                 entity.Property(e => e.CenaJednostkowa).HasColumnType("money");
 
                 entity.Property(e => e.Iddostawcy).HasColumnName("IDdostawcy");
 
                 entity.Property(e => e.Idkategorii).HasColumnName("IDkategorii");
-
-                entity.Property(e => e.Idproduktu).HasColumnName("IDproduktu");
 
                 entity.Property(e => e.IlośćJednostkowa).HasMaxLength(255);
 
@@ -198,11 +201,13 @@ namespace ProjektWPF_BD.Model
 
             modelBuilder.Entity<Spedytorzy>(entity =>
             {
-                entity.HasNoKey();
+                entity.HasKey(e => e.Idspedytora);
 
                 entity.ToTable("Spedytorzy");
 
-                entity.Property(e => e.Idspedytora).HasColumnName("IDspedytora");
+                entity.Property(e => e.Idspedytora)
+                    .ValueGeneratedNever()
+                    .HasColumnName("IDspedytora");
 
                 entity.Property(e => e.NazwaFirmy)
                     .IsRequired()
@@ -213,7 +218,11 @@ namespace ProjektWPF_BD.Model
 
             modelBuilder.Entity<Zamówienium>(entity =>
             {
-                entity.HasNoKey();
+                entity.HasKey(e => e.Idzamówienia);
+
+                entity.Property(e => e.Idzamówienia)
+                    .ValueGeneratedNever()
+                    .HasColumnName("IDzamówienia");
 
                 entity.Property(e => e.AdresOdbiorcy).HasMaxLength(60);
 
@@ -233,8 +242,6 @@ namespace ProjektWPF_BD.Model
                 entity.Property(e => e.Idpracownika).HasColumnName("IDpracownika");
 
                 entity.Property(e => e.Idspedytora).HasColumnName("IDspedytora");
-
-                entity.Property(e => e.Idzamówienia).HasColumnName("IDzamówienia");
 
                 entity.Property(e => e.KodPocztowyOdbiorcy).HasMaxLength(10);
 

@@ -10,35 +10,37 @@
     <StackPanel >
         <StackPanel Orientation="Horizontal">
             <TextBlock Text="Nazwa Produktu:"  VerticalAlignment="Center" Width="200" TextAlignment="Center"/>
-            <TextBox Width="200" mah:TextBoxHelper.Watermark="Tekst"/>
+            <TextBox Width="200" mah:TextBoxHelper.Watermark="Tekst" Text = "{Binding NazwaProduktu}"/>
         </StackPanel>
         <StackPanel Orientation="Horizontal">
             <TextBlock Text="Dostawca:"  VerticalAlignment="Center" Width="200" TextAlignment="Center"/>
-            <TextBox Width="200" mah:TextBoxHelper.Watermark="Tekst"/>
+            <TextBox Width="200" mah:TextBoxHelper.Watermark="Tekst" Text = "{Binding NazwaFirmy}"/>
+            <CheckBox Content="ID/Nazwa" IsChecked="{Binding NazwaFirmyPoID}" Margin="10,0,0,0"/>
         </StackPanel>
         <StackPanel Orientation="Horizontal">
             <TextBlock Text="Kategoria:"  VerticalAlignment="Center" Width="200" TextAlignment="Center"/>
-            <TextBox Width="200" mah:TextBoxHelper.Watermark="Tekst" />
+            <TextBox Width="200" mah:TextBoxHelper.Watermark="Tekst" Text = "{Binding NazwaKategorii}"/>
+            <CheckBox Content="ID/Nazwa" IsChecked="{Binding KategoriaPoID}" Margin="10,0,0,0"/>
         </StackPanel>
         <StackPanel Orientation="Horizontal">
             <TextBlock Text="Ilość Jednostkowa:"  VerticalAlignment="Center" Width="200" TextAlignment="Center"/>
-            <TextBox Width="200" mah:TextBoxHelper.Watermark="Tekst"/>
+            <TextBox Width="200" mah:TextBoxHelper.Watermark="Tekst" Text = "{Binding IlośćJednostkowa}"/>
         </StackPanel>
         <StackPanel Orientation="Horizontal">
             <TextBlock Text="Cena Jednostkowa:"  VerticalAlignment="Center" Width="200" TextAlignment="Center"/>
-            <TextBox Width="200" mah:TextBoxHelper.Watermark="Tekst"/>
+            <TextBox Width="200" mah:TextBoxHelper.Watermark="Tekst" Text = "{Binding CenaJednostkowa}"/>
         </StackPanel>
         <StackPanel Orientation="Horizontal">
             <TextBlock Text="Stan Magazynu:"  VerticalAlignment="Center" Width="200" TextAlignment="Center"/>
-            <TextBox Width="200" mah:TextBoxHelper.Watermark="Tekst"/>
+            <TextBox Width="200" mah:TextBoxHelper.Watermark="Tekst" Text = "{Binding StanMagazynu}"/>
         </StackPanel>
         <StackPanel Orientation="Horizontal">
             <TextBlock Text="Ilość zamówienia:"  VerticalAlignment="Center" Width="200" TextAlignment="Center"/>
-            <TextBox Width="200" mah:TextBoxHelper.Watermark="Tekst" />
+            <TextBox Width="200" mah:TextBoxHelper.Watermark="Tekst" Text = "{Binding IlośćZamówiona}" />
         </StackPanel>
         <StackPanel Orientation="Horizontal">
             <TextBlock Text="Stan Minimum:"  VerticalAlignment="Center" Width="200" TextAlignment="Center"/>
-            <TextBox Width="200" mah:TextBoxHelper.Watermark="Tekst" />
+            <TextBox Width="200" mah:TextBoxHelper.Watermark="Tekst" Text = "{Binding StanMinimum}" />
         </StackPanel>
     </StackPanel>
 </UserControl>
