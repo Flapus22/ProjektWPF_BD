@@ -9,6 +9,10 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <StackPanel >
         <StackPanel Orientation="Horizontal">
+            <TextBlock Text="Id klienta:"  VerticalAlignment="Center" Width="200" TextAlignment="Center"/>
+            <TextBox Width="200" mah:TextBoxHelper.Watermark="Tekst" Text="{Binding Path = Idklienta}"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
             <TextBlock Text="Nazwa Firmy:"  VerticalAlignment="Center" Width="200" TextAlignment="Center"/>
             <TextBox Width="200" mah:TextBoxHelper.Watermark="Tekst" Text="{Binding Path=NazwaFirmy}"/>
         </StackPanel>

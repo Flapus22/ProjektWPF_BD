@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace ProjektWPF_BD.ViewModel
 {
-    class EmployeeViewModel
+    public class EmployeeViewModel : INotifyPropertyChanged
     {
         public int Idpracownika { get; set; }
         public string Nazwisko { get; set; }
@@ -24,5 +25,7 @@ namespace ProjektWPF_BD.ViewModel
         public string TelefonWewnętrzny { get; set; }
         public string Uwagi { get; set; }
         public int? Szef { get; set; }
+
+        public event PropertyChangedEventHandler PropertyChanged;
     }
 }

@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="ProjektWPF_BD.View.UserControls.NewTransactionUserControlView"
+﻿<UserControl xmlns:View="clr-namespace:ProjektWPF_BD.View"  x:Class="ProjektWPF_BD.View.UserControls.NewTransactionUserControlView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -9,45 +9,66 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <StackPanel >
-        <StackPanel Orientation="Horizontal">
-            <TextBlock Text="Nazwa Firmy:"  VerticalAlignment="Center" Width="200" TextAlignment="Center"/>
-            <TextBox Width="200" mah:TextBoxHelper.Watermark="Tekst"/>
+        <StackPanel HorizontalAlignment="Center">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Id Zamówienia:"  VerticalAlignment="Center" Width="200" TextAlignment="Center"/>
+                <TextBox Width="200" mah:TextBoxHelper.Watermark="Tekst" Text="{Binding Path = Idzamówienia}"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Nazwa Firmy:"  VerticalAlignment="Center" Width="200" TextAlignment="Center"/>
+                <TextBox Width="200" mah:TextBoxHelper.Watermark="Tekst" Text="{Binding Path = NazwaFirmy}"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Pracownik:"  VerticalAlignment="Center" Width="200" TextAlignment="Center"/>
+                <TextBox Width="200" mah:TextBoxHelper.Watermark="Tekst" Text="{Binding Path = Pracownik}"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Data Zamówienia:"  VerticalAlignment="Center" Width="200" TextAlignment="Center"/>
+                <TextBox Width="200" mah:TextBoxHelper.Watermark="Tekst" Text="{Binding Path = DataZamówienia}" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Data Wymagana:"  VerticalAlignment="Center" Width="200" TextAlignment="Center"/>
+                <TextBox Width="200" mah:TextBoxHelper.Watermark="Tekst" Text="{Binding Path = DataWymagana}"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Data Wysyłki:"  VerticalAlignment="Center" Width="200" TextAlignment="Center"/>
+                <TextBox Width="200" mah:TextBoxHelper.Watermark="Tekst" Text="{Binding Path = DataWysyłki}"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Idspedytora:"  VerticalAlignment="Center" Width="200" TextAlignment="Center"/>
+                <TextBox Width="200" mah:TextBoxHelper.Watermark="Tekst" Text="{Binding Path = Idspedytora}"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="NazwaOdbiorcy:"  VerticalAlignment="Center" Width="200" TextAlignment="Center"/>
+                <TextBox Width="200" mah:TextBoxHelper.Watermark="Tekst" Text="{Binding Path = NazwaOdbiorcy}" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="AdresOdbiorcy:"  VerticalAlignment="Center" Width="200" TextAlignment="Center"/>
+                <TextBox Width="200" mah:TextBoxHelper.Watermark="Tekst" Text="{Binding Path = AdresOdbiorcy}" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="MiastoOdbiorcy:"  VerticalAlignment="Center" Width="200" TextAlignment="Center"/>
+                <TextBox Width="200" mah:TextBoxHelper.Watermark="Tekst" Text="{Binding Path = MiastoOdbiorcy}" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="RegionOdbiorcy:"  VerticalAlignment="Center" Width="200" TextAlignment="Center"/>
+                <TextBox Width="200" mah:TextBoxHelper.Watermark="Tekst" Text="{Binding Path = RegionOdbiorcy}" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="KodPocztowyOdbiorcy:"  VerticalAlignment="Center" Width="200" TextAlignment="Center"/>
+                <TextBox Width="200" mah:TextBoxHelper.Watermark="Tekst" Text="{Binding Path = KodPocztowyOdbiorcy}" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="KrajOdbiorcy:"  VerticalAlignment="Center" Width="200" TextAlignment="Center"/>
+                <TextBox Width="200" mah:TextBoxHelper.Watermark="Tekst" Text="{Binding Path = KrajOdbiorcy}" />
+            </StackPanel>
         </StackPanel>
-        <StackPanel Orientation="Horizontal">
-            <TextBlock Text="Przedstawiciel:"  VerticalAlignment="Center" Width="200" TextAlignment="Center"/>
-            <TextBox Width="200" mah:TextBoxHelper.Watermark="Tekst"/>
-        </StackPanel>
-        <StackPanel Orientation="Horizontal">
-            <TextBlock Text="StanowiskoPrzedstawiciela:"  VerticalAlignment="Center" Width="200" TextAlignment="Center"/>
-            <TextBox Width="200" mah:TextBoxHelper.Watermark="Tekst" />
-        </StackPanel>
-        <StackPanel Orientation="Horizontal">
-            <TextBlock Text="Adres:"  VerticalAlignment="Center" Width="200" TextAlignment="Center"/>
-            <TextBox Width="200" mah:TextBoxHelper.Watermark="Tekst"/>
-        </StackPanel>
-        <StackPanel Orientation="Horizontal">
-            <TextBlock Text="Miasto:"  VerticalAlignment="Center" Width="200" TextAlignment="Center"/>
-            <TextBox Width="200" mah:TextBoxHelper.Watermark="Tekst"/>
-        </StackPanel>
-        <StackPanel Orientation="Horizontal">
-            <TextBlock Text="Region:"  VerticalAlignment="Center" Width="200" TextAlignment="Center"/>
-            <TextBox Width="200" mah:TextBoxHelper.Watermark="Tekst"/>
-        </StackPanel>
-        <StackPanel Orientation="Horizontal">
-            <TextBlock Text="KodPocztowy:"  VerticalAlignment="Center" Width="200" TextAlignment="Center"/>
-            <TextBox Width="200" mah:TextBoxHelper.Watermark="Tekst" />
-        </StackPanel>
-        <StackPanel Orientation="Horizontal">
-            <TextBlock Text="Kraj:"  VerticalAlignment="Center" Width="200" TextAlignment="Center"/>
-            <TextBox Width="200" mah:TextBoxHelper.Watermark="Tekst" />
-        </StackPanel>
-        <StackPanel Orientation="Horizontal">
-            <TextBlock Text="Telefon:"  VerticalAlignment="Center" Width="200" TextAlignment="Center"/>
-            <TextBox Width="200" mah:TextBoxHelper.Watermark="Tekst" />
-        </StackPanel>
-        <StackPanel Orientation="Horizontal">
-            <TextBlock Text="Faks:"  VerticalAlignment="Center" Width="200" TextAlignment="Center"/>
-            <TextBox Width="200" mah:TextBoxHelper.Watermark="Tekst" />
+        <!--<StackPanel Orientation="Horizontal">
+            <TextBlock Text="Suma:"  VerticalAlignment="Center" Width="200" TextAlignment="Center"/>
+            <TextBox Width="200" mah:TextBoxHelper.Watermark="Tekst" Text="{Binding Path = Idklienta}" />
+        </StackPanel>-->
+        <StackPanel>
+            <View:OrderProductView/>
         </StackPanel>
     </StackPanel>
 </UserControl>

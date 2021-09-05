@@ -26,8 +26,7 @@ namespace ProjektWPF_BD.View
         public DataGridEmployee()
         {
             InitializeComponent();
-            DataGridViewModel.instance.LoadCustomers();
-
+ 
             Data.DataContext = DataGridViewModel.instance;
         }
 

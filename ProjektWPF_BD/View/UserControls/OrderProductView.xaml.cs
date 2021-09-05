@@ -13,18 +13,22 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using ProjektWPF_BD.ViewModel;
+using ProjektWPF_BD.Model;
 
-namespace ProjektWPF_BD.View.UserControls
+
+namespace ProjektWPF_BD.View
 {
     /// <summary>
-    /// Logika interakcji dla klasy NewEmployeeUserControlView.xaml
+    /// Logika interakcji dla klasy DataGrid.xaml
     /// </summary>
-    public partial class NewEmployeeUserControlView : UserControl
+    public partial class OrderProductView : UserControl
     {
-        public NewEmployeeUserControlView(EmployeeViewModel employeeViewModel)
+        public OrderProductView()
         {
             InitializeComponent();
-            DataContext = employeeViewModel;
+
+            
         }
+
     }
 }

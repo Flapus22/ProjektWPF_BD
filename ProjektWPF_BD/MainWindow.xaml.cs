@@ -43,47 +43,7 @@ namespace ProjektWPF_BD
 
         private async void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            using (var context = new BD1_2020Context())
-            {
-
-                var newCustomer = new Klienci()
-                {
-                    Idklienta = "aa",
-                    NazwaFirmy = "Baczki",
-                    Przedstawiciel = "aaa",
-                    StanowiskoPrzedstawiciela = "aaa",
-                    Adres = "aaa",
-                    Miasto = "aaa",
-                    Region = "aaa",
-                    KodPocztowy = "aaa",
-                    Kraj = "aaa",
-                    Telefon = "aaa",
-                    Faks = "aaa"
-                };
-
-                var a = new Produkty()
-                {
-                    NazwaProduktu = "aa",
-                    Iddostawcy = 1,
-                    Idkategorii = 1,
-                    IlośćJednostkowa = "szt",
-                    CenaJednostkowa = 1,
-                    StanMagazynu = 1,
-                    IlośćZamówiona = 1,
-                    StanMinimum = 1,
-                    Wycofany = true
-                };
-                var b = new Kategorie
-                {
-                    NazwaKategorii = "Kategoria",
-                    Opis = "nic ważnego"
-                };
-
-                //context.Klienci.Add(newCustomer);
-                //context.Kategorie.Add();
-                context.SaveChanges();
-            }
-
+            
         }
     }
 }

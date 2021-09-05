@@ -27,6 +27,9 @@
     <Compile Update="View\UserControls\DataGridEmployee.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="View\UserControls\OrderProductView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="View\UserControls\DataGridTransactions.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -37,6 +40,10 @@
 
   <ItemGroup>
     <Page Update="View\UserControls\DataGridEmployee.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\UserControls\OrderProductView.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
       <SubType>Designer</SubType>
     </Page>

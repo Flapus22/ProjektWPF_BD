@@ -36,6 +36,9 @@
     <Page Update="View\UserControls\DataGridEmployee.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="View\UserControls\OrderProductView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="View\UserControls\DataGridTransactions.xaml">
       <SubType>Designer</SubType>
     </Page>

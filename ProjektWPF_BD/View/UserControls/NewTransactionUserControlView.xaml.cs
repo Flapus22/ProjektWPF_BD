@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using ProjektWPF_BD.ViewModel;
+
 
 namespace ProjektWPF_BD.View.UserControls
 {
@@ -20,9 +22,10 @@ namespace ProjektWPF_BD.View.UserControls
     /// </summary>
     public partial class NewTransactionUserControlView : UserControl
     {
-        public NewTransactionUserControlView()
+        public NewTransactionUserControlView(TransactionViewModel transactionViewModel)
         {
             InitializeComponent();
+            DataContext = transactionViewModel;
         }
     }
 }

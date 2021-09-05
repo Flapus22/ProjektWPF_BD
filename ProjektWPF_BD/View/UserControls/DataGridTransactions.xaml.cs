@@ -26,7 +26,6 @@ namespace ProjektWPF_BD.View
         public DataGridTransactions()
         {
             InitializeComponent();
-            DataGridViewModel.instance.LoadCustomers();
 
             Data.DataContext = DataGridViewModel.instance;
         }

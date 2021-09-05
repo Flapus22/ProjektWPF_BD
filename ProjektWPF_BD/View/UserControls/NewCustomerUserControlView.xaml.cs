@@ -21,10 +21,10 @@ namespace ProjektWPF_BD.View.UserControls
     /// </summary>
     public partial class NewCustomerUserControlView : UserControl
     {
-        public NewCustomerUserControlView()
+        public NewCustomerUserControlView(CustomerViewModel customerViewModel)
         {
             InitializeComponent();
-            DataContext = new NewCustomerViewModel(); ;
+            DataContext = customerViewModel;
         }
     }
 }

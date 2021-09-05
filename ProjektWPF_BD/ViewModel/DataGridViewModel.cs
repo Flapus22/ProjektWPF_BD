@@ -17,7 +17,7 @@ namespace ProjektWPF_BD.ViewModel
         public static DataGridViewModel instance { get; set; } = new DataGridViewModel();
 
         public List<Klienci> Customer { get; set; } = new List<Klienci>();
-        public List<Pracownicy> Employee { get; set; } = new List<Pracownicy>();
+        public List<EmployeeViewModel> Employee { get; set; } = new List<EmployeeViewModel>();
         public List<Produkty> Product { get; set; } = new List<Produkty>();
         public List<Zamówienium> Transaction { get; set; } = new List<Zamówienium>();
 
@@ -26,18 +26,13 @@ namespace ProjektWPF_BD.ViewModel
         public static DataGridProduct DataGridViewProduct { get; set; } = new DataGridProduct();
         public static DataGridTransactions DataGridViewTransactions { get; set; } = new DataGridTransactions();
 
-        public UserControl UserControl { get; set; } 
+        public UserControl UserControl { get; set; }
 
 
         public event PropertyChangedEventHandler PropertyChanged;
 
 
         //public DataGrid1 CustomerDataGridView { get; set; } = new DataGrid1();
-
-        public void LoadCustomers()
-        {
-
-        }
 
         public async Task ShowCustomers()
         {
@@ -58,7 +53,24 @@ namespace ProjektWPF_BD.ViewModel
             instance.UserControl = DataGridViewEmployee;
             await using (var context = new BD1_2020Context())
             {
-                Employee = context.Pracownicy.ToList();
+                Employee = context.Pracownicy.Select(x => new EmployeeViewModel
+                {
+                    Idpracownika = x.Idpracownika,
+                    Nazwisko = x.Nazwisko,
+                    Imię = x.Imię,
+                    Stanowisko = x.Stanowisko,
+                    ZwrotGrzecznościowy = x.ZwrotGrzecznościowy,
+                    DataUrodzenia = x.DataUrodzenia,
+                    DataZatrudnienia = x.DataZatrudnienia,
+                    Adres = x.Adres,
+                    Miasto = x.Miasto,
+                    Region = x.Region,
+                    KodPocztowy = x.KodPocztowy,
+                    TelefonDomowy = x.TelefonDomowy,
+                    TelefonWewnętrzny = x.TelefonWewnętrzny,
+                    Uwagi = x.Uwagi,
+                    Szef = x.Szef
+                }).ToList();
             }
         }
 
