@@ -16,7 +16,7 @@ namespace ProjektWPF_BD.ViewModel
         public DateTime? DataWymagana { get; set; }
         public DateTime? DataWysyłki { get; set; }
         public int? Idspedytora { get; set; }
-        public double Suma { get; set; }
+        //public double Suma { get; set; }
         public string NazwaOdbiorcy { get; set; }
         public string AdresOdbiorcy { get; set; }
         public string MiastoOdbiorcy { get; set; }

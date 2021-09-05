@@ -34,7 +34,7 @@
                     </Style>
                 </mah:DropDownButton.ItemContainerStyle>
             </mah:DropDownButton>
-            <Button Click="Button_Click_1">Klik</Button>
+            <!--<Button Click="Button_Click_1">Klik</Button>-->
         </DockPanel>
         <Grid  Grid.Row="1">
             <ContentControl x:Name="contentControl"  Content="{Binding UserControl}"/>

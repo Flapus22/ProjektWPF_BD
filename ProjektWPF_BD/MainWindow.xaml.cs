@@ -41,9 +41,5 @@ namespace ProjektWPF_BD
             window.Show();
         }
 
-        private async void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-            
-        }
     }
 }

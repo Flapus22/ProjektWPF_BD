@@ -19,7 +19,7 @@ namespace ProjektWPF_BD.ViewModel
         public List<Klienci> Customer { get; set; } = new List<Klienci>();
         public List<EmployeeViewModel> Employee { get; set; } = new List<EmployeeViewModel>();
         public List<Produkty> Product { get; set; } = new List<Produkty>();
-        public List<Zamówienium> Transaction { get; set; } = new List<Zamówienium>();
+        public List<TransactionViewModel> Transaction { get; set; } = new List<TransactionViewModel>();
 
         public static DataGridCustomer DataGridViewCustomer { get; set; } = new DataGridCustomer();
         public static DataGridEmployee DataGridViewEmployee { get; set; } = new DataGridEmployee();
@@ -89,7 +89,40 @@ namespace ProjektWPF_BD.ViewModel
             //ProductViewModel productViewModel = new ProductViewModel();
             await using (var context = new BD1_2020Context())
             {
-                Transaction = context.Zamówienia.OrderByDescending(x=>x.DataZamówienia).Where(x=>x.DataZamówienia!=null).Take(100).ToList();
+                Transaction = context.Zamówienia.Join(context.Klienci,
+                    z => z.Idklienta,
+                    k => k.Idklienta,
+                    (z, k) => new
+                    {
+                        Idzamówienia = z.Idzamówienia,
+                        NazwaFirmy = k.NazwaFirmy,
+                        Pracownik = z.Idpracownika,
+                        DataZamówienia = z.DataZamówienia,
+                        DataWysyłki = z.DataWysyłki,
+                        NazwaOdbiorcy = z.NazwaOdbiorcy,
+                        AdresOdbiorcy = z.AdresOdbiorcy,
+                        MiastoOdbiorcy = z.MiastoOdbiorcy,
+                        RegionOdbiorcy = z.RegionOdbiorcy,
+                        KodPocztowyOdbiorcy = z.KodPocztowyOdbiorcy,
+                        KrajOdbiorcy = z.KrajOdbiorcy,
+                    }).Join(context.Pracownicy,
+                    x=>x.Pracownik,
+                    p=>p.Idpracownika,
+                    (x,p)=> new TransactionViewModel
+                    {
+                        Idzamówienia = x.Idzamówienia,
+                        NazwaFirmy = x.NazwaFirmy,
+                        Pracownik = $"{p.Imię} {p.Nazwisko}",
+                        DataZamówienia = x.DataZamówienia,
+                        DataWysyłki = x.DataWysyłki,
+                        NazwaOdbiorcy = x.NazwaOdbiorcy,
+                        AdresOdbiorcy = x.AdresOdbiorcy,
+                        MiastoOdbiorcy = x.MiastoOdbiorcy,
+                        RegionOdbiorcy = x.RegionOdbiorcy,
+                        KodPocztowyOdbiorcy = x.KodPocztowyOdbiorcy,
+                        KrajOdbiorcy = x.KrajOdbiorcy
+                    }).Take(100).ToList();
+                    
             }
         }
     }
