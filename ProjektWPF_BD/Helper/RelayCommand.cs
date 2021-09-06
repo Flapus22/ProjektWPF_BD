@@ -13,10 +13,8 @@ namespace ProjektWPF_BD.Helper
 
         Func<Task> Action;
 
-        public RelayCommand(Func<Task> action)
-        {
-            Action = action;
-        }
+        public RelayCommand(Func<Task> action) => Action = action;
+
 
         //private Action Action;
 
@@ -25,11 +23,8 @@ namespace ProjektWPF_BD.Helper
         //    Action = action;
         //}
 
-        public bool CanExecute(object parameter)
-        {
-            if (Action != null)return true;
-            return false;
-        }
+        public bool CanExecute(object parameter) => Action != null;
+
         public void Execute(object parameter)
         {
             //Action.Invoke();
